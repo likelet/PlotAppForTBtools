@@ -15,13 +15,10 @@ shinyServer(function(input,output,session){
  datasetInput <- reactive({ 
                             
 example<-read.table("data/TBtools.level2.counts.table.xls",header=T,sep="\t")
-#example<-read.table("/srv/shiny-server/PCAonline/test.txt",header=F,sep="\t",row.names=1)
  	inFile <- input$file1
   if (!is.null(inFile)){
        
       data<-read.table(inFile$datapath, header=input$header, sep=input$sep, stringsAsFactors=F) 
-      # data<-factor2numeric(data)
-   			
    
   }
  switch(input$dataset,
@@ -107,7 +104,7 @@ output$GOplotRender<-renderPlot({
  
 
 ################################
-#download 2D plot option    
+#download  plot option    
       output$downloadDataPNG <- downloadHandler(
         filename = function() {
           paste("output", Sys.time(), '.png', sep='')
@@ -143,7 +140,7 @@ output$GOplotRender<-renderPlot({
         
         content = function(file) {
           setEPS()
-          postscript(file, horizontal = FALSE, onefile = FALSE, paper = "special")
+          postscript(file)
           print(GOplotfunction())
           dev.off()
         },

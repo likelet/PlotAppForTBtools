@@ -2,7 +2,7 @@
 A shiny app for TBtools data plot
 
 **Screen shoot of IDEA**
-<img src="www/image/screenshot.png">
+<img src="inst/TBploter/www/image/screenshot.png">
 
 
 ### Install dependencies

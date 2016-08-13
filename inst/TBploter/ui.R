@@ -21,6 +21,7 @@ dashboardPage(
       tabItem("introduction", 
               
               p("This application was designed for plot data output by TBtools, which was developed by CJ from UCSC"),
+              tags$img(src="image/workflow.png"),
               br(),
               br(),
               strong("This application was created by "),
