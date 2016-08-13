@@ -20,7 +20,7 @@ example<-read.table("data/TBtools.level2.counts.table.xls",header=T,sep="\t")
   if (!is.null(inFile)){
        
       data<-read.table(inFile$datapath, header=input$header, sep=input$sep, stringsAsFactors=F) 
-      data<-factor2numeric(data)
+      # data<-factor2numeric(data)
    			
    
   }
@@ -54,7 +54,7 @@ GOplotfunction<-function(){
   tbtoolsCounts<-processedGOdata()
   tbtoolsCounts$Description<-factor(tbtoolsCounts$Description,unique(as.character(tbtoolsCounts$Description)))
   
-  GeneCount=tbtoolsCounts[2,5]
+  GeneCount=tbtoolsCounts[2,6]
   p<-ggplot(tbtoolsCounts)+
     geom_bar(aes(x=Description,y=Counts/GeneCount*100,fill=Class),stat="identity")+
     geom_text(aes(x=Description,y=(Counts+max(tbtoolsCounts$Counts)*0.06)/GeneCount*100,label=Counts))+
