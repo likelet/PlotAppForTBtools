@@ -1,7 +1,7 @@
 # PlotAppForTBtools
 A shiny app for TBtools data plot
 
-**Screen shoot of IDEA**
+**Screen shoot of TBploter**
 <img src="inst/TBploter/www/image/screenshot.png">
 
 
