@@ -1,5 +1,5 @@
 # PlotAppForTBtools
-TBtools is a Toolset written by CJ-Chen for wet-lab biologists.It aims at facilitating some common and elaborate but simple molecular analysis tasks such as sequences extract, gene set functional enrichment It is easy to use and can run in all Operating system including Mac, Linux, Windows, which has Java run time environment higher than 1.6 . However, TBtools may mainly focus on data analysis procedure which make it diffcalt to plot fancy figures as well as publishable. To cover the shortage, we implement a inteactive plot websever using shiny programing env, and named TBploter
+TBtools is a Toolset written by CJ-Chen for wet-lab biologists.It aims at facilitating some common and elaborate but simple molecular analysis tasks such as sequences extract, gene set functional enrichment It is easy to use and can run in all Operating system including Mac, Linux, Windows, which has Java run time environment higher than 1.6 . However, TBtools may mainly focus on data analysis procedure which make it difficult to plot fancy figures as well as being publishable. To cover the shortage, we implement an interactive plot websever using shiny programing env, and named TBploter
 
 **Screen shoot of TBploter**
 <img src="inst/TBploter/www/image/screenshot.png">
@@ -56,4 +56,4 @@ Please feel free contact us. <br/>
 MIT license
 
 ### Citation 
-During developing
+during preparation
