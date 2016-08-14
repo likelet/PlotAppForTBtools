@@ -1,9 +1,14 @@
 # PlotAppForTBtools
-A shiny app for TBtools data plot
+TBtools is a Toolset written by CJ-Chen for wet-lab biologists.It aims at facilitating some common and elaborate but simple molecular analysis tasks such as sequences extract, gene set functional enrichment It is easy to use and can run in all Operating system including Mac, Linux, Windows, which has Java run time environment higher than 1.6 . However, TBtools may mainly focus on data analysis procedure which make it diffcalt to plot fancy figures as well as publishable. To cover the shortage, we implement a inteactive plot websever using shiny programing env, and named TBploter
 
 **Screen shoot of TBploter**
 <img src="inst/TBploter/www/image/screenshot.png">
 
+### Function gallary
+**GOenriment ploter**
+<img src="inst/TBploter/www/image/GOanalysis.png">
+**KEGGenrichment ploter**
+<img src="inst/TBploter/www/image/GOanalysis.png">
 
 ### Install dependencies
 To check the dependencies installed correctly, this command can help users to check the status of each installation<br/>
@@ -26,10 +31,6 @@ for(i in 1:length(cDep)){
   }
   install.packages(cDep[i])
 }
-
-###Install shinysky for pretty shiny UI
-if (!require("devtools"))
-  install.packages("devtools")
 
 ```
 ### Install TBploter

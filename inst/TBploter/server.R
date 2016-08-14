@@ -202,36 +202,6 @@ output$GOplotRender<-renderPlot({
           )+ggtitle("Statistics of KEGG Pathway Enrichment")+
           ylab("Pathway")+
           xlab("Enrichment Factor")
-        if(input$theme=="Tufte"){
-          p=p+ theme_tufte()
-        }else if(input$theme=="Economist"){
-          p=p+  scale_color_economist()
-        }else if(input$theme=="Solarized"){
-          p=p+  scale_color_solarized("blue")
-        }else if(input$theme=="Stata"){
-          p=p+ scale_color_stata()
-        }else if(input$theme=="Excel 2003"){
-          p=p+  scale_color_excel()
-        }else if(input$theme=="Inverse Gray"){
-          p=p+ theme_igray()
-        }else if(input$theme=="Fivethirtyeight"){
-          p=p+theme_fivethirtyeight()
-        }else if(input$theme=="Tableau"){
-          p=p+ scale_color_tableau()
-        }else if(input$theme=="Stephen"){
-          p=p+ scale_color_few()
-        }else if(input$theme=="Wall Street"){
-          p=p+ scale_color_wsj("colors6", "")
-        }else if(input$theme=="GDocs"){
-          p=p+ scale_color_gdocs()
-        }else if(input$theme=="Calc"){
-          p=p+ scale_color_calc()
-        }else if(input$theme=="Pander"){
-          p=p+ scale_color_pander()
-        }else if(input$theme=="Highcharts"){
-          p=p+ scale_color_hc()
-        }
-        
         
       }
       
