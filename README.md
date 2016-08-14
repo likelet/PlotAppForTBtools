@@ -8,7 +8,7 @@ TBtools is a Toolset written by CJ-Chen for wet-lab biologists.It aims at facili
 **GOenriment ploter**
 <img src="inst/TBploter/www/image/GOanalysis.png">
 **KEGGenrichment ploter**
-<img src="inst/TBploter/www/image/GOanalysis.png">
+<img src="inst/TBploter/www/image/KEGGanalysis.png">
 
 ### Install dependencies
 To check the dependencies installed correctly, this command can help users to check the status of each installation<br/>
