@@ -1,4 +1,4 @@
-# PlotAppForTBtools
+# PlotAppForTBtools V1.0.1
 [TBtools](https://github.com/CJ-Chen/TBtools/releases) is a Toolset written by CJ-Chen for wet-lab biologists.It aims at facilitating some common and elaborate but simple molecular analysis tasks such as sequences extract, gene set functional enrichment It is easy to use and can run in all Operating system including Mac, Linux, Windows, which has Java run time environment higher than 1.6 . However, TBtools may mainly focus on data analysis procedure which make it difficult to plot fancy figures as well as being publishable. To cover the shortage, we implement an interactive plot websever using shiny programing env, and named TBploter
 
 [Click here to redirect to TRploter website.](http://202.116.161.95:3839/sample-apps/PlotAppForTBtools/inst/TBploter/)<br />
@@ -42,6 +42,10 @@ if (!require("devtools"))
   install.packages("devtools")
 devtools::install_github("likelet/PlotAppForTBtools")
 ```
+### Update Information
+####2016-8-15
+add tiff plot function 
+
 ### Designers:
 Qi Zhao, zhaoqi3@mail2.sysu.edu.cn<br/>
 

@@ -101,7 +101,8 @@ dashboardPage(
                         div(
                         downloadLink('downloadDataPNG', 'Download PNG-file'),
                         downloadLink('downloadDataPDF', 'Download PDF-file',class="downloadLinkred"),
-                        downloadLink('downloadDataEPS', 'Download EPS-file',class="downloadLinkblue")
+                        downloadLink('downloadDataEPS', 'Download EPS-file',class="downloadLinkblue"),
+                        downloadLink('downloadDatatiff', 'Download TIFF-file',class="downloadLinkgreen")
                         ),
                         selectInput("theme", "Plot Theme:",
                                     c("Tufte","Economist","Solarized","Stata","Excel 2003","Inverse Gray","Fivethirtyeight","Tableau","Stephen","Wall Street","GDocs","Calc","Pander","High
@@ -159,7 +160,8 @@ dashboardPage(
                           div(
                             downloadLink('downloadDataKEGGPNG', 'Download PNG-file'),
                             downloadLink('downloadDataKEGGPDF', 'Download PDF-file',class="downloadLinkred"),
-                            downloadLink('downloadDataKEGGEPS', 'Download EPS-file',class="downloadLinkblue")
+                            downloadLink('downloadDataKEGGEPS', 'Download EPS-file',class="downloadLinkblue"),
+                            downloadLink('downloadDataKEGGtiff', 'Download TIFF-file',class="downloadLinkgreen")
                           ),
                           # selectInput("themekegg", "Plot Theme:",
                           #             c("Tufte","Economist","Solarized","Stata","Excel 2003","Inverse Gray","Fivethirtyeight","Tableau","Stephen","Wall Street","GDocs","Calc","Pander","High

@@ -115,10 +115,11 @@ output$GOplotRender<-renderPlot({
         },
         
         content = function(file) {
-          png(file, type="cairo",units="in",width = 10, height = 10,pointsize=5.2,res=300)
-          #png(file=file, width = 600, height = 600, units = "px", pointsize = 12, bg = "white", res = NA)
-          print(GOplotfunction())
-          dev.off()
+          # png(file, type="cairo",units="in",width = 10, height = 10,pointsize=5.2,res=300)
+          # png(file=file, width = 1800, height = 1800,  res = 300)
+          # print(GOplotfunction())
+          ggsave(file, GOplotfunction(),width = 10, height = 10, units = "in",pointsize=5.2)
+          # dev.off()
         },
         contentType = 'image/png'
       )
@@ -130,9 +131,10 @@ output$GOplotRender<-renderPlot({
         },
         
         content = function(file) {
-          pdf(file)
-          print(GOplotfunction())
-          dev.off()
+          # pdf(file)
+          # print(GOplotfunction())
+          ggsave(file, GOplotfunction(),width = 10, height = 10, units = "in",pointsize=5.2)
+          # dev.off()
         },
         contentType = 'image/pdf'
       )
@@ -144,9 +146,21 @@ output$GOplotRender<-renderPlot({
         
         content = function(file) {
           setEPS()
-          postscript(file)
-          print(GOplotfunction())
-          dev.off()
+          # postscript(file, print.it = TRUE)
+          # print(GOplotfunction())
+          # dev.off()
+          ggsave(file, GOplotfunction(),width = 10, height = 10, units = "in",pointsize=5.2,fonts=c("serif", "Palatino"))
+        },
+        contentType = 'image/eps'
+      )
+      output$downloadDatatiff <- downloadHandler(
+        filename = function() {
+          paste("output", Sys.time(), '.tiff', sep='')
+        },
+        
+        content = function(file) {
+          ggsave(file, GOplotfunction(),width = 10, height = 10, units = "in",pointsize=5.2)
+          
         },
         contentType = 'image/eps'
       )
@@ -220,10 +234,7 @@ output$GOplotRender<-renderPlot({
         },
         
         content = function(file) {
-          png(file, type="cairo",units="in",width = 10, height = 10,pointsize=5.2,res=300)
-          #png(file=file, width = 600, height = 600, units = "px", pointsize = 12, bg = "white", res = NA)
-          print(KEGGplotfunction())
-          dev.off()
+          ggsave(file, KEGGplotfunction(),width = 10, height = 10, units = "in",pointsize=5.2)
         },
         contentType = 'image/png'
       )
@@ -235,9 +246,7 @@ output$GOplotRender<-renderPlot({
         },
         
         content = function(file) {
-          pdf(file)
-          print(KEGGplotfunction())
-          dev.off()
+          ggsave(file, KEGGplotfunction(),width = 10, height = 10, units = "in",pointsize=4)
         },
         contentType = 'image/pdf'
       )
@@ -248,10 +257,19 @@ output$GOplotRender<-renderPlot({
         },
         
         content = function(file) {
-          setEPS()
-          postscript(file)
-          print(KEGGplotfunction())
-          dev.off()
+          ggsave(file, KEGGplotfunction(),width = 10, height = 10, units = "in",pointsize=4,fonts=c("serif", "Palatino"))
+          
+        },
+        contentType = 'image/eps'
+      )
+      output$downloadDataKEGGtiff <- downloadHandler(
+        filename = function() {
+          paste("output", Sys.time(), '.tiff', sep='')
+        },
+        
+        content = function(file) {
+          ggsave(file, KEGGplotfunction(),width = 10, height = 10, units = "in",pointsize=4)
+          
         },
         contentType = 'image/eps'
       )
